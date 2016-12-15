@@ -1,0 +1,37 @@
+<ion-view view-title="Login" ng-controller='LoginCtrl'>
+
+  <ion-content class="padding home-background">
+
+    <form name="myForm">
+      <center><img src="img/Logo with 300_120.png"></center>
+
+      <div class="row row-center has-header">
+        <div class="col col-center">
+          <label class="item item-input">
+            <i class="icon ion-person positive padding-right"></i>
+
+            <input type="text" name="username" ng-model="username" id="name" placeholder="username" required>
+
+          </label>
+          <label class="item item-input">
+            <i class="icon ion-locked positive padding-right"></i>
+
+            <input type="password" name="password" ng-model="password" id="pswd" placeholder="password" required>
+          </label>
+        </div>
+      </div>
+      <div style="color:white;">
+        <span ng-show="myForm.username.$touched && myForm.username.$invalid || myForm.password.$touched && myForm.password.$invalid">These fields are required.</span>
+      </div>
+
+      <div class="list list-inset">
+        <ion-checkbox ng-click="rememberme()">Remember Me </ion-checkbox>
+      </div>
+
+      <button class="button button-positive button-block" value="Login" ng-click="Login()">
+        Login
+      </button>
+    </form>
+  </ion-content>
+
+</ion-view>

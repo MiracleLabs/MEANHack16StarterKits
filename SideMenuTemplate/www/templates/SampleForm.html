@@ -1,0 +1,73 @@
+<ion-view view-title="Sample Form">
+  <ion-content class="padding">
+
+    <!--Text Field-->
+    <div class="list">
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Email</span>
+        <input type="text" placeholder="mss@miracle.com">
+      </label>
+    </div>
+
+    <!--Text field with submit button-->
+    <div class="list">
+
+      <div class="item item-input-inset">
+        <label class="item-input-wrapper">
+          <input type="text" placeholder="Email">
+        </label>
+        <button class="button button-small">
+          Submit
+        </button>
+      </div>
+
+    </div>
+
+    <!--Radio and Checkbox buttons-->
+    <ion-list>
+      <ion-radio ng-model="choice" ng-value="'A'">RadioButton</ion-radio>
+      <ion-checkbox ng-model="filter.red">Checkbox</ion-checkbox>
+    </ion-list>
+    <!--Toggle button-->
+    <ul class="list">
+
+      <li class="item item-toggle">
+        Toggle
+        <label class="toggle toggle-assertive">
+          <input type="checkbox">
+          <div class="track">
+            <div class="handle"></div>
+          </div>
+        </label>
+      </li>
+    </ul>
+
+    <!--calling button-->
+    <div class="list">
+
+      <div class="item item-button-right">
+        Call
+        <button class="button button-positive">
+          <i class="icon ion-ios-telephone"></i>
+        </button>
+      </div>
+
+    </div>
+    <!--Dropdown-->
+    <div class="list">
+
+      <label class="item item-input item-select">
+        <div class="input-label">
+          Lightsaber
+        </div>
+        <select>
+          <option>Blue</option>
+          <option selected>Green</option>
+          <option>Red</option>
+        </select>
+      </label>
+
+    </div>
+
+  </ion-content>
+</ion-view>

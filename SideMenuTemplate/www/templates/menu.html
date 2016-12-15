@@ -1,0 +1,47 @@
+<ion-side-menus enable-menu-with-back-views="false">
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar-calm" align-title="center">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+      <!--Navigator button-->
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+
+
+    <ion-nav-view></ion-nav-view>
+    <ion-nav-view name="menuContent"></ion-nav-view>
+
+  </ion-side-menu-content>
+  <!--Sidemenu List-->
+  <ion-side-menu side="left">
+    <ion-header-bar class="bar-stable" align-title="center">
+      <h1 class="title">List</h1>
+    </ion-header-bar>
+    <ion-content>
+      <!--list of items-->
+      <ion-list>
+        <ion-item menu-close href="#/app/SampleForm">
+          Sample Form
+        </ion-item>
+        <ion-item menu-close href="#/app/SampleAJAX">
+          Sample AJAX
+        </ion-item>
+        <ion-item menu-close href="#/app/SampleList">
+          Sample List
+        </ion-item>
+        <ion-item menu-close ng-controller="LogoutCtrl" ng-click="logout()">
+          Logout
+        </ion-item>
+      </ion-list>
+
+    </ion-content>
+
+  </ion-side-menu>
+  <!--Footer-->
+  <ion-footer-bar class="bar-calm custom-dark" align-title="center">
+    <h1 class="title" style="font-size:16px !important;">&copy; 2016 Miracle Software Systems, Inc.</h1>
+  </ion-footer-bar>
+</ion-side-menus>

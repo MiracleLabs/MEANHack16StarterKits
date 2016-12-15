@@ -1,0 +1,23 @@
+<ion-view view-title="Sample AJAX">
+  <ion-content class="padding">
+<h>Here is the sample controller for consuming an API using AngularJS</h>
+    <!--Sample controller for AJAX call-->
+    <div class="list card padding">
+      <pre>
+
+    .controller('page1Ctrl',function($scope,$http) {
+
+      $scope.callService=function(){
+
+        $http.get("place the API").then(function(response){
+
+          $scope.result=response.data;
+
+      })
+      }
+        })
+
+    </pre>
+    </div>
+  </ion-content>
+</ion-view>

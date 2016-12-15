@@ -1,0 +1,10 @@
+
+
+.home-background {
+  background: url("../img/login2_full_bg.png") no-repeat center center fixed;
+  background-size: cover;
+}
+
+body {
+  cursor: url('http://ionicframework.com/img/finger.png'), auto;
+}

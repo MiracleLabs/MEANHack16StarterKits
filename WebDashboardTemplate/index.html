@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<!--[if IE 9]>         <html class="no-js lt-ie10"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+
+        <title>Index</title>
+
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0">
+
+        <!-- Icons -->
+        <!-- The following icons can be replaced with your own, they are used by desktop and mobile browsers -->
+        <link rel="shortcut icon" href="img/favicon.png">
+        <link rel="apple-touch-icon" href="img/icon57.png" sizes="57x57">
+        <link rel="apple-touch-icon" href="img/icon72.png" sizes="72x72">
+        <link rel="apple-touch-icon" href="img/icon76.png" sizes="76x76">
+        <link rel="apple-touch-icon" href="img/icon114.png" sizes="114x114">
+        <link rel="apple-touch-icon" href="img/icon120.png" sizes="120x120">
+        <link rel="apple-touch-icon" href="img/icon144.png" sizes="144x144">
+        <link rel="apple-touch-icon" href="img/icon152.png" sizes="152x152">
+        <link rel="apple-touch-icon" href="img/icon180.png" sizes="180x180">
+        <!-- END Icons -->
+
+        <!-- Stylesheets -->
+        <!-- Bootstrap is included in its original form, unaltered -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+
+        <!-- Related styles of various icon packs and plugins -->
+        <link rel="stylesheet" href="css/plugins.css">
+
+        <!-- The main stylesheet of this template. All Bootstrap overwrites are defined in here -->
+        <link rel="stylesheet" href="css/main.css">
+
+        <!-- Include a specific file here from css/themes/ folder to alter the default theme of the template -->
+
+        <!-- The themes stylesheet of this template (for using specific theme color in individual elements - must included last) -->
+        <link rel="stylesheet" href="css/themes.css">
+        <!-- END Stylesheets -->
+
+        <!-- Modernizr (browser feature detection library) -->
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <style>
+            .img-responsive {
+                display: block;
+                max-width: 100%;
+                height: 40px;
+                padding-top: 5px;
+            }
+            .dropdown-menu {
+    min-width: 275px;
+}
+.sidebar-nav {
+    padding:0 0 0;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #428bca;
+    border-color: #357ebd;
+}
+.btn {
+    
+    padding: 8px 25px;
+    margin:2px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.428571429;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+.dropdown-menu .divider {
+    margin: 3px 0;
+    padding: 0 !important;
+    background-color: #eee !important;
+}
+.avatar{
+    border:1px solid #eee;
+    border-radius: 50%;
+}
+    #sidebar, .themed-background, .sidebar-title{
+       background-color:#000;
+   }
+   .navbar.navbar-inverse{
+       background-color:#00aae7;
+   }
+   
+   .navbar.navbar-inverse.navbar-glass{
+       background-color:#00aae7;
+   }
+        </style>
+    </head>
+    <body>
+        <!-- Page Wrapper -->
+        <!-- In the PHP version you can set the following options from inc/config file -->
+        <!--
+            Available classes:
+
+            'page-loading'      enables page preloader
+        -->
+        <div id="page-wrapper" class="page-loading">
+            <!-- Preloader -->
+            <!-- Preloader functionality (initialized in js/app.js) - pageLoading() -->
+            <!-- Used only if page preloader enabled from inc/config (PHP version) or the class 'page-loading' is added in #page-wrapper element (HTML version) -->
+            <div class="preloader">
+                <div class="inner">
+                    <!-- Animation spinner for all modern browsers -->
+                    <div class="preloader-spinner themed-background hidden-lt-ie10"></div>
+
+                    <!-- Text for IE9 -->
+                    <h3 class="text-primary visible-lt-ie10"><strong>Loading..</strong></h3>
+                </div>
+            </div>
+            <!-- END Preloader -->
+
+            <!-- Page Container -->
+            <!-- In the PHP version you can set the following options from inc/config file -->
+            <!--
+                Available #page-container classes:
+
+                'sidebar-light'                                 for a light main sidebar (You can add it along with any other class)
+
+                'sidebar-visible-lg-mini'                       main sidebar condensed - Mini Navigation (> 991px)
+                'sidebar-visible-lg-full'                       main sidebar full - Full Navigation (> 991px)
+
+                'sidebar-alt-visible-lg'                        alternative sidebar visible by default (> 991px) (You can add it along with any other class)
+
+                'header-fixed-top'                              has to be added only if the class 'navbar-fixed-top' was added on header.navbar
+                'header-fixed-bottom'                           has to be added only if the class 'navbar-fixed-bottom' was added on header.navbar
+
+                'fixed-width'                                   for a fixed width layout (can only be used with a static header/main sidebar layout)
+
+                'enable-cookies'                                enables cookies for remembering active color theme when changed from the sidebar links (You can add it along with any other class)
+            -->
+            <div id="page-container" class="header-fixed-top sidebar-visible-lg-full">
+                <!-- Alternative Sidebar -->
+                <div id="sidebar-alt" tabindex="-1" aria-hidden="true">
+                    
+                    <!-- Toggle Alternative Sidebar Button (visible only in static layout) -->
+                    <a href="javascript:void(0)" id="sidebar-alt-close" onclick="App.sidebar('toggle-sidebar-alt');">
+                        <i class="fa fa-times"></i></a>
+
+                    <!-- Wrapper for scrolling functionality -->
+                    <div id="sidebar-scroll-alt">
+                        <!-- Sidebar Content -->
+                        <div class="sidebar-content">
+                            <!-- Profile -->
+                            <div class="sidebar-section">
+                                <h2 class="text-light">Profile</h2>
+                                <form action="index.html" method="post" class="form-control-borderless" onsubmit="return false;">
+                                    <div class="form-group">
+                                        <label for="side-profile-name">Name</label>
+                                        <input type="text" id="side-profile-name" name="side-profile-name" class="form-control" value="John Doe">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="side-profile-email">Email</label>
+                                        <input type="email" id="side-profile-email" name="side-profile-email" class="form-control" value="john.doe@example.com">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="side-profile-password">New Password</label>
+                                        <input type="password" id="side-profile-password" name="side-profile-password" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="side-profile-password-confirm">Confirm New Password</label>
+                                        <input type="password" id="side-profile-password-confirm" name="side-profile-password-confirm" class="form-control">
+                                    </div>
+                                    <div class="form-group remove-margin">
+                                        <button type="submit" class="btn btn-effect-ripple btn-primary" onclick="App.sidebar('close-sidebar-alt');">Save</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <!-- END Profile -->
+
+                            <!-- Settings -->
+                            <div class="sidebar-section">
+                                <h2 class="text-light">Settings</h2>
+                                <form action="index.html" method="post" class="form-horizontal form-control-borderless" onsubmit="return false;">
+                                    <div class="form-group">
+                                        <label class="col-xs-7 control-label-fixed">Notifications</label>
+                                        <div class="col-xs-5">
+                                            <label class="switch switch-success"><input type="checkbox" checked><span></span></label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-xs-7 control-label-fixed">Public Profile</label>
+                                        <div class="col-xs-5">
+                                            <label class="switch switch-success"><input type="checkbox" checked><span></span></label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-xs-7 control-label-fixed">Enable API</label>
+                                        <div class="col-xs-5">
+                                            <label class="switch switch-success"><input type="checkbox"><span></span></label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group remove-margin">
+                                        <button type="submit" class="btn btn-effect-ripple btn-primary" onclick="App.sidebar('close-sidebar-alt');">Save</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <!-- END Settings -->
+                        </div>
+                        <!-- END Sidebar Content -->
+                    </div>
+                    <!-- END Wrapper for scrolling functionality -->
+                </div>
+                <!-- END Alternative Sidebar -->
+
+                <!-- Main Sidebar -->
+                <div id="sidebar">
+                    <!-- Sidebar Brand -->
+                    
+                    
+                    <!-- END Sidebar Brand -->
+
+                    <!-- Wrapper for scrolling functionality -->
+                    <div id="sidebar-scroll">
+                        <!-- Sidebar Content -->
+                        <div class="sidebar-content">
+                            <!-- Sidebar Navigation -->
+                            <ul class="sidebar-nav">
+                             
+                             <style>
+                                  {color: #fff;}</style>   
+                                <li>
+                                <a href="#" class="sidebar-nav-menu">
+                                <i class="fa fa-home sidebar-nav-icon"></i>
+                                <span class="sidebar-nav-mini-hide">
+                                   
+                                    <img src="img/logo-white.png" class="img-responsive" style="margin-left: 30px;margin-top: -40px;">
+                                    </span></a> 
+                                </li>
+                                
+                                <li>
+                                    <a href="#"><i class="gi gi-compass sidebar-nav-icon"></i>
+                                    <span class="sidebar-nav-mini-hide">Dashboard</span></a>
+                                </li>
+                                <li class="sidebar-separator">
+                                    <i class="fa fa-ellipsis-h"></i>
+                                </li>
+                                <li>
+                                    <a href="#" class="sidebar-nav-menu">
+                                        <i class="fa fa-chevron-left sidebar-nav-indicator sidebar-nav-mini-hide"></i>
+                                        <i class="fa fa-rocket sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">Web Elements</span></a>
+                                    <ul>
+                                        <li>
+                                            <a href="forms.html">Forms</a>
+                                        </li>
+                                        <li>
+                                            <a href="charts.html">Charts</a>
+                                        </li>
+                                        <li>
+                                            <a href="tables.html">Tables</a>
+                                        </li>
+                                        
+                                        
+                                        
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" class="sidebar-nav-menu">
+                                        <i class="fa fa-chevron-left sidebar-nav-indicator sidebar-nav-mini-hide"></i>
+                                        <i class="fa fa-rocket sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">More Elements</span></a>
+                                    <ul>
+                                        <li>
+                                            <a href="widgets.html">Widgets</a>
+                                        </li>
+                                        <li>
+                                            <a href="elements.html">Elements</a>
+                                        </li>
+                                        <li>
+                                            <a href="font-awesome.html">Font Awesome</a>
+                                        </li>
+                                        
+                                        
+                                        
+                                    </ul>
+                                </li>
+                               
+                                <li>
+                                    <a href="#"><i class="gi gi-inbox sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">Menu Example #1</span></a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-share-alt sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">Menu Example #2</span></a>
+                                </li>
+                               
+                            </ul>
+                            <!-- END Sidebar Navigation -->
+
+                            <!-- Color Themes -->
+                            <!-- Preview a theme on a page functionality can be found in js/app.js - colorThemePreview() -->
+                            
+                            <!-- END Color Themes -->
+                        </div>
+                        <!-- END Sidebar Content -->
+                    </div>
+                    <!-- END Wrapper for scrolling functionality -->
+
+                    <!-- Sidebar Extra Info -->
+                    
+                    <!-- END Sidebar Extra Info -->
+                </div>
+                <!-- END Main Sidebar -->
+
+                <!-- Main Container -->
+                <div id="main-container">
+                    <!-- Header -->
+                    <!-- In the PHP version you can set the following options from inc/config file -->
+                    <!--
+                        Available header.navbar classes:
+
+                        'navbar-default'            for the default light header
+                        'navbar-inverse'            for an alternative dark header
+
+                        'navbar-fixed-top'          for a top fixed header (fixed main sidebar with scroll will be auto initialized, functionality can be found in js/app.js - handleSidebar())
+                            'header-fixed-top'      has to be added on #page-container only if the class 'navbar-fixed-top' was added
+
+                        'navbar-fixed-bottom'       for a bottom fixed header (fixed main sidebar with scroll will be auto initialized, functionality can be found in js/app.js - handleSidebar()))
+                            'header-fixed-bottom'   has to be added on #page-container only if the class 'navbar-fixed-bottom' was added
+                    -->
+                    <header class="navbar navbar-inverse navbar-fixed-top">
+                        <!-- Left Header Navigation -->
+                        <ul class="nav navbar-nav-custom">
+                            <!-- Main Sidebar Toggle Button -->
+                            <li>
+                                <a href="javascript:void(0)" onclick="App.sidebar('toggle-sidebar');this.blur();">
+                                    <i class="fa fa-ellipsis-v fa-fw animation-fadeInRight" id="sidebar-toggle-mini"></i>
+                                    <i class="fa fa-bars fa-fw animation-fadeInRight" id="sidebar-toggle-full"></i>
+                                </a>
+                                
+                            </li>
+                            <!-- END Main Sidebar Toggle Button -->
+
+                            <!-- Header Link -->
+                            
+                            <!-- END Header Link -->
+                        </ul>
+                        <!-- END Left Header Navigation -->
+
+                        <!-- Right Header Navigation -->
+                        <ul class="nav navbar-nav-custom pull-right">
+                            <!-- Search Form -->
+                            
+                            <!-- END Search Form -->
+
+                            <!-- Alternative Sidebar Toggle Button -->
+                            <li>
+                                <a href="javascript:void(0)" onclick="App.sidebar('toggle-sidebar-alt');this.blur();">
+                                    <i class="gi gi-settings"></i>
+                                </a>
+                            </li>
+                            <!-- END Alternative Sidebar Toggle Button -->
+
+                            <!-- User Dropdown -->
+                            <li class="dropdown">
+                                <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">
+                                    <img src="img/placeholders/avatars/avatar9.jpg" alt="avatar">
+                                </a>
+                                 <ul class="dropdown-menu dropdown-menu-right">
+                                   
+                                    
+                                    <li>
+                                        <center>
+                                            <br>
+                                            <img src="img/placeholders/avatars/avatar9.jpg" alt="user" class="avatar"/> <br>
+                                            <h3><strong>User Name</strong></h3>
+                                            <h5>Designation</h5>
+                                        </center>
+                                    </li>
+                                    <li>
+                                        
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li>
+                                         <button type="button" class="btn btn-primary pull-left">Profile</button>
+                                        
+                                           <button type="button" class="btn btn-primary pull-right">Log out</button>
+                                       
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- END User Dropdown -->
+                        </ul>
+                        <!-- END Right Header Navigation -->
+                    </header>
+                    <!-- END Header -->
+
+                    <!-- Page content -->
+                    <div id="page-content">
+                        <!-- First Row -->
+                        <div class="row">
+                            <div class="col-sm-6">
+                            <!-- Chart Widget -->
+                            <div class="widget size-response">
+                                <div class="widget-content border-bottom" style="background-color:black !important">
+                                    <span class="pull-right  whiteText"><strong><font color="#fff">Web Workers Responses</font></strong></span> <span class="whiteText" style="color:#fff;">Size vs Response Time</span>
+                                </div>
+                                <div class="widget-content border-bottom themed-background-muted">
+                                    <!-- Flot Charts (initialized in js/pages/readyDashboard.js), for more examples you can check out http://www.flotcharts.org/ -->
+                                    <div id="chart-classic-dash" style="height: 393px;"></div>
+                                </div>
+                            </div>
+                            <!-- END Chart Widget -->
+                            <br><br>
+                              <div class="widget">
+                                              <div class="widget-content centerText">
+                                                  <strong>9.8mb</strong> | Response Time : 16ms
+                                              </div>
+                                              <div class="widget-image">
+                                                  <img src="img/photo9.jpg" alt="image">
+                                                  <div class="widget-image-content">
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          <br><br>
+                                             <div class="block">
+                                    <!-- Horizontal Form Title -->
+                                    <div class="block-title">
+                                        <div class="block-options pull-right">
+                                            <a href="javascript:void(0)" class="btn btn-effect-ripple btn-default toggle-bordered enable-tooltip" data-toggle="button" title="" style="overflow: hidden; position: relative;" data-original-title="Toggles .form-bordered class">Borderless</a>
+                                        </div>
+                                        <h2>Horizontal Form</h2>
+                                    </div>
+                                    <!-- END Horizontal Form Title -->
+
+                                    <!-- Horizontal Form Content -->
+                                    <form action="page_forms_components.html" method="post" class="form-horizontal form-bordered" onsubmit="return false;">
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label" for="example-hf-email">Email</label>
+                                            <div class="col-md-9">
+                                                <input type="email" id="example-hf-email" name="example-hf-email" class="form-control">
+                                                <span class="help-block">Please enter your email</span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label" for="example-hf-password">Password</label>
+                                            <div class="col-md-9">
+                                                <input type="password" id="example-hf-password" name="example-hf-password" class="form-control">
+                                                <span class="help-block">Please enter your password</span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group form-actions">
+                                            <div class="col-md-9 col-md-offset-3">
+                                                <button type="submit" class="btn btn-effect-ripple btn-primary" style="overflow: hidden; position: relative;">Submit</button>
+                                                <button type="reset" class="btn btn-effect-ripple btn-danger" style="overflow: hidden; position: relative;">Reset</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <!-- END Horizontal Form Content -->
+                                </div>
+                        </div>
+                            <div class="col-sm-6">
+                                <div class="block">
+                                    <!-- General Elements Title -->
+                                    <div class="block-title">
+                                        <div class="block-options pull-right">
+                                            <a href="javascript:void(0)" class="btn btn-effect-ripple btn-default toggle-bordered enable-tooltip" data-toggle="button" title="" style="overflow: hidden; position: relative;" data-original-title="Toggles .form-bordered class">Borderless</a>
+                                        </div>
+                                        <h2>General Elements</h2>
+                                    </div>
+                                    <!-- END General Elements Title -->
+
+                                    <!-- General Elements Content -->
+                                    <form action="page_forms_components.html" method="post" enctype="multipart/form-data" class="form-horizontal form-bordered" onsubmit="return false;">
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">Static</label>
+                                            <div class="col-md-9">
+                                                <p class="form-control-static">This is static text</p>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label" for="example-text-input">Text</label>
+                                            <div class="col-md-6">
+                                                <input type="text" id="example-text-input" name="example-text-input" class="form-control" placeholder="Text">
+                                                <span class="help-block">This is a help text</span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label" for="example-email">Email</label>
+                                            <div class="col-md-6">
+                                                <input type="email" id="example-email" name="example-email" class="form-control" placeholder="Email">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label" for="example-password">Password</label>
+                                            <div class="col-md-6">
+                                                <input type="password" id="example-password" name="example-password" class="form-control" placeholder="Password">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label" for="example-disabled">Disabled</label>
+                                            <div class="col-md-6">
+                                                <input type="text" id="example-disabled" name="example-disabled" class="form-control" placeholder="Disabled" disabled="">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label" for="example-textarea-input">Textarea</label>
+                                            <div class="col-md-9">
+                                                <textarea id="example-textarea-input" name="example-textarea-input" rows="7" class="form-control" placeholder="Description.."></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label" for="example-select">Select</label>
+                                            <div class="col-md-6">
+                                                <select id="example-select" name="example-select" class="form-control" size="1">
+                                                    <option value="0">Please select</option>
+                                                    <option value="1">HTML</option>
+                                                    <option value="2">CSS</option>
+                                                    <option value="3">Javascript</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label" for="example-multiple-select">Multiple</label>
+                                            <div class="col-md-6">
+                                                <select id="example-multiple-select" name="example-multiple-select" class="form-control" size="5" multiple="">
+                                                    <option value="1">Option #1</option>
+                                                    <option value="2">Option #2</option>
+                                                    <option value="3">Option #3</option>
+                                                    <option value="4">Option #4</option>
+                                                    <option value="5">Option #5</option>
+                                                    <option value="6">Option #6</option>
+                                                    <option value="7">Option #7</option>
+                                                    <option value="8">Option #8</option>
+                                                    <option value="9">Option #9</option>
+                                                    <option value="10">Option #10</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">Radios</label>
+                                            <div class="col-md-9">
+                                                <div class="radio">
+                                                    <label for="example-radio1">
+                                                        <input type="radio" id="example-radio1" name="example-radios" value="option1"> HTML
+                                                    </label>
+                                                </div>
+                                                <div class="radio">
+                                                    <label for="example-radio2">
+                                                        <input type="radio" id="example-radio2" name="example-radios" value="option2"> CSS
+                                                    </label>
+                                                </div>
+                                                <div class="radio">
+                                                    <label for="example-radio3">
+                                                        <input type="radio" id="example-radio3" name="example-radios" value="option3"> Javascript
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">Inline Radios</label>
+                                            <div class="col-md-9">
+                                                <label class="radio-inline" for="example-inline-radio1">
+                                                    <input type="radio" id="example-inline-radio1" name="example-inline-radios" value="option1"> HTML
+                                                </label>
+                                                <label class="radio-inline" for="example-inline-radio2">
+                                                    <input type="radio" id="example-inline-radio2" name="example-inline-radios" value="option2"> CSS
+                                                </label>
+                                                <label class="radio-inline" for="example-inline-radio3">
+                                                    <input type="radio" id="example-inline-radio3" name="example-inline-radios" value="option3"> Javascript
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">Checkboxes</label>
+                                            <div class="col-md-9">
+                                                <div class="checkbox">
+                                                    <label for="example-checkbox1">
+                                                        <input type="checkbox" id="example-checkbox1" name="example-checkbox1" value="option1"> HTML
+                                                    </label>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <label for="example-checkbox2">
+                                                        <input type="checkbox" id="example-checkbox2" name="example-checkbox2" value="option2"> CSS
+                                                    </label>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <label for="example-checkbox3">
+                                                        <input type="checkbox" id="example-checkbox3" name="example-checkbox3" value="option3"> Javascript
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">Inline Checkboxes</label>
+                                            <div class="col-md-9">
+                                                <label class="checkbox-inline" for="example-inline-checkbox1">
+                                                    <input type="checkbox" id="example-inline-checkbox1" name="example-inline-checkbox1" value="option1"> HTML
+                                                </label>
+                                                <label class="checkbox-inline" for="example-inline-checkbox2">
+                                                    <input type="checkbox" id="example-inline-checkbox2" name="example-inline-checkbox2" value="option2"> CSS
+                                                </label>
+                                                <label class="checkbox-inline" for="example-inline-checkbox3">
+                                                    <input type="checkbox" id="example-inline-checkbox3" name="example-inline-checkbox3" value="option3"> Javascript
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label" for="example-file-input">File</label>
+                                            <div class="col-md-9">
+                                                <input type="file" id="example-file-input" name="example-file-input">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label" for="example-file-multiple-input">Multiple File</label>
+                                            <div class="col-md-9">
+                                                <input type="file" id="example-file-multiple-input" name="example-file-multiple-input" multiple="">
+                                            </div>
+                                        </div>
+                                        <div class="form-group form-actions">
+                                            <div class="col-md-9 col-md-offset-3">
+                                                <button type="submit" class="btn btn-effect-ripple btn-primary" style="overflow: hidden; position: relative;">Submit</button>
+                                                <button type="reset" class="btn btn-effect-ripple btn-danger" style="overflow: hidden; position: relative;">Reset</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <!-- END General Elements Content -->
+                                </div>
+                            </div>
+                        </div>
+                     
+            
+            <div class="row">
+                <div class="col-sm-6">
+                 
+                </div>
+          
+            </div>
+            </div>
+                    <!-- END Page Content -->
+                </div>
+                <!-- END Main Container -->
+            </div>
+            <!-- END Page Container -->
+        </div>
+        <!-- END Page Wrapper -->
+
+        <!-- jQuery, Bootstrap, jQuery plugins and Custom JS code -->
+        <script src="js/vendor/jquery-2.2.0.min.js"></script>
+        <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/app.js"></script>
+
+        <!-- Load and execute javascript code used only in this page -->
+        <script src="js/pages/readyDashboard.js"></script>
+        <script>$(function(){ ReadyDashboard.init(); });</script>
+    </body>
+</html>

@@ -1,0 +1,1260 @@
+<!DOCTYPE html>
+<!--[if IE 9]>         <html class="no-js lt-ie10"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+
+        <title>Widgets</title>
+
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0">
+
+        <!-- Icons -->
+        <!-- The following icons can be replaced with your own, they are used by desktop and mobile browsers -->
+      
+        <link rel="apple-touch-icon" href="img/icon57.png" sizes="57x57">
+        <link rel="apple-touch-icon" href="img/icon72.png" sizes="72x72">
+        <link rel="apple-touch-icon" href="img/icon76.png" sizes="76x76">
+        <link rel="apple-touch-icon" href="img/icon114.png" sizes="114x114">
+        <link rel="apple-touch-icon" href="img/icon120.png" sizes="120x120">
+        <link rel="apple-touch-icon" href="img/icon144.png" sizes="144x144">
+        <link rel="apple-touch-icon" href="img/icon152.png" sizes="152x152">
+        <link rel="apple-touch-icon" href="img/icon180.png" sizes="180x180">
+        <!-- END Icons -->
+
+        <!-- Stylesheets -->
+        <!-- Bootstrap is included in its original form, unaltered -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+
+        <!-- Related styles of various icon packs and plugins -->
+        <link rel="stylesheet" href="css/plugins.css">
+
+        <!-- The main stylesheet of this template. All Bootstrap overwrites are defined in here -->
+        <link rel="stylesheet" href="css/main.css">
+
+        <!-- Include a specific file here from css/themes/ folder to alter the default theme of the template -->
+
+        <!-- The themes stylesheet of this template (for using specific theme color in individual elements - must included last) -->
+        <link rel="stylesheet" href="css/themes.css">
+        <!-- END Stylesheets -->
+
+        <!-- Modernizr (browser feature detection library) -->
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <style>
+            .img-responsive {
+                display: block;
+                max-width: 100%;
+                height: 40px;
+                padding-top: 5px;
+            }
+            .dropdown-menu {
+    min-width: 275px;
+}
+.sidebar-nav {
+    padding:0 0 0;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #428bca;
+    border-color: #357ebd;
+}
+.btn {
+    
+    padding: 8px 25px;
+    margin:2px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.428571429;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+.dropdown-menu .divider {
+    margin: 3px 0;
+    padding: 0 !important;
+    background-color: #eee !important;
+}
+.avatar{
+    border:1px solid #eee;
+    border-radius: 50%;
+}
+    #sidebar, .themed-background, .sidebar-title{
+       background-color:#000;
+   }
+   .navbar.navbar-inverse{
+       background-color:#00aae7;
+   }
+   
+   .navbar.navbar-inverse.navbar-glass{
+       background-color:#00aae7;
+   }
+        </style>
+    </head>
+    <body>
+        <!-- Page Wrapper -->
+        <!-- In the PHP version you can set the following options from inc/config file -->
+        <!--
+            Available classes:
+
+            'page-loading'      enables page preloader
+        -->
+        <div id="page-wrapper" class="page-loading">
+            <!-- Preloader -->
+            <!-- Preloader functionality (initialized in js/app.js) - pageLoading() -->
+            <!-- Used only if page preloader enabled from inc/config (PHP version) or the class 'page-loading' is added in #page-wrapper element (HTML version) -->
+            <div class="preloader">
+                <div class="inner">
+                    <!-- Animation spinner for all modern browsers -->
+                    <div class="preloader-spinner themed-background hidden-lt-ie10"></div>
+
+                    <!-- Text for IE9 -->
+                    <h3 class="text-primary visible-lt-ie10"><strong>Loading..</strong></h3>
+                </div>
+            </div>
+            <!-- END Preloader -->
+
+            <!-- Page Container -->
+            <!-- In the PHP version you can set the following options from inc/config file -->
+            <!--
+                Available #page-container classes:
+
+                'sidebar-light'                                 for a light main sidebar (You can add it along with any other class)
+
+                'sidebar-visible-lg-mini'                       main sidebar condensed - Mini Navigation (> 991px)
+                'sidebar-visible-lg-full'                       main sidebar full - Full Navigation (> 991px)
+
+                'sidebar-alt-visible-lg'                        alternative sidebar visible by default (> 991px) (You can add it along with any other class)
+
+                'header-fixed-top'                              has to be added only if the class 'navbar-fixed-top' was added on header.navbar
+                'header-fixed-bottom'                           has to be added only if the class 'navbar-fixed-bottom' was added on header.navbar
+
+                'fixed-width'                                   for a fixed width layout (can only be used with a static header/main sidebar layout)
+
+                'enable-cookies'                                enables cookies for remembering active color theme when changed from the sidebar links (You can add it along with any other class)
+            -->
+            <div id="page-container" class="header-fixed-top sidebar-visible-lg-full">
+                <!-- Alternative Sidebar -->
+                <div id="sidebar-alt" tabindex="-1" aria-hidden="true">
+                    
+                    <!-- Toggle Alternative Sidebar Button (visible only in static layout) -->
+                    <a href="javascript:void(0)" id="sidebar-alt-close" onclick="App.sidebar('toggle-sidebar-alt');">
+                        <i class="fa fa-times"></i></a>
+
+                    <!-- Wrapper for scrolling functionality -->
+                    <div id="sidebar-scroll-alt">
+                        <!-- Sidebar Content -->
+                        <div class="sidebar-content">
+                            <!-- Profile -->
+                            <div class="sidebar-section">
+                                <h2 class="text-light">Profile</h2>
+                                <form action="index.html" method="post" class="form-control-borderless" onsubmit="return false;">
+                                    <div class="form-group">
+                                        <label for="side-profile-name">Name</label>
+                                        <input type="text" id="side-profile-name" name="side-profile-name" class="form-control" value="John Doe">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="side-profile-email">Email</label>
+                                        <input type="email" id="side-profile-email" name="side-profile-email" class="form-control" value="john.doe@example.com">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="side-profile-password">New Password</label>
+                                        <input type="password" id="side-profile-password" name="side-profile-password" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="side-profile-password-confirm">Confirm New Password</label>
+                                        <input type="password" id="side-profile-password-confirm" name="side-profile-password-confirm" class="form-control">
+                                    </div>
+                                    <div class="form-group remove-margin">
+                                        <button type="submit" class="btn btn-effect-ripple btn-primary" onclick="App.sidebar('close-sidebar-alt');">Save</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <!-- END Profile -->
+
+                            <!-- Settings -->
+                            <div class="sidebar-section">
+                                <h2 class="text-light">Settings</h2>
+                                <form action="index.html" method="post" class="form-horizontal form-control-borderless" onsubmit="return false;">
+                                    <div class="form-group">
+                                        <label class="col-xs-7 control-label-fixed">Notifications</label>
+                                        <div class="col-xs-5">
+                                            <label class="switch switch-success"><input type="checkbox" checked><span></span></label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-xs-7 control-label-fixed">Public Profile</label>
+                                        <div class="col-xs-5">
+                                            <label class="switch switch-success"><input type="checkbox" checked><span></span></label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-xs-7 control-label-fixed">Enable API</label>
+                                        <div class="col-xs-5">
+                                            <label class="switch switch-success"><input type="checkbox"><span></span></label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group remove-margin">
+                                        <button type="submit" class="btn btn-effect-ripple btn-primary" onclick="App.sidebar('close-sidebar-alt');">Save</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <!-- END Settings -->
+                        </div>
+                        <!-- END Sidebar Content -->
+                    </div>
+                    <!-- END Wrapper for scrolling functionality -->
+                </div>
+                <!-- END Alternative Sidebar -->
+
+                <!-- Main Sidebar -->
+                <div id="sidebar">
+                    <!-- Sidebar Brand -->
+                    
+                    
+                    <!-- END Sidebar Brand -->
+
+                    <!-- Wrapper for scrolling functionality -->
+                    <div id="sidebar-scroll">
+                        <!-- Sidebar Content -->
+                        <div class="sidebar-content">
+                            <!-- Sidebar Navigation -->
+                            <ul class="sidebar-nav">
+                             
+                             <style>
+                                  {color: #fff;}</style>   
+                                <li>
+                                <a href="#" class="sidebar-nav-menu">
+                                <i class="fa fa-home sidebar-nav-icon"></i>
+                                <span class="sidebar-nav-mini-hide">
+                                   
+                                    <img src="img/logo-white.png" class="img-responsive" style="margin-left: 30px;margin-top: -40px;">
+                                    </span></a> 
+                                </li>
+                                
+                                <li>
+                                    <a href="#"><i class="gi gi-compass sidebar-nav-icon"></i>
+                                    <span class="sidebar-nav-mini-hide">Dashboard</span></a>
+                                </li>
+                                <li class="sidebar-separator">
+                                    <i class="fa fa-ellipsis-h"></i>
+                                </li>
+                                <li>
+                                    <a href="#" class="sidebar-nav-menu">
+                                        <i class="fa fa-chevron-left sidebar-nav-indicator sidebar-nav-mini-hide"></i>
+                                        <i class="fa fa-rocket sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">Web Elements</span></a>
+                                    <ul>
+                                        <li>
+                                            <a href="forms.html">Forms</a>
+                                        </li>
+                                        <li>
+                                            <a href="charts.html">Charts</a>
+                                        </li>
+                                        <li>
+                                            <a href="tables.html">Tables</a>
+                                        </li>
+                                        
+                                        
+                                        
+                                    </ul>
+                                </li>
+                                <li class="active">
+                                    <a href="#" class="sidebar-nav-menu">
+                                        <i class="fa fa-chevron-left sidebar-nav-indicator sidebar-nav-mini-hide"></i>
+                                        <i class="fa fa-rocket sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">More Elements</span></a>
+                                    <ul>
+                                        <li class="active">
+                                            <a href="#">Widgets</a>
+                                        </li>
+                                        <li>
+                                            <a href="elements.html">Elements</a>
+                                        </li>
+                                        <li>
+                                            <a href="font-awesome.html">Font Awesome</a>
+                                        </li>
+                                        
+                                        
+                                        
+                                    </ul>
+                                </li>
+                               
+                                <li>
+                                    <a href="#"><i class="gi gi-inbox sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">Menu Example #1</span></a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-share-alt sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">Menu Example #2</span></a>
+                                </li>
+                               
+                            </ul>
+                            <!-- END Sidebar Navigation -->
+
+                            <!-- Color Themes -->
+                            <!-- Preview a theme on a page functionality can be found in js/app.js - colorThemePreview() -->
+                            
+                            <!-- END Color Themes -->
+                        </div>
+                        <!-- END Sidebar Content -->
+                    </div>
+                    <!-- END Wrapper for scrolling functionality -->
+
+                    <!-- Sidebar Extra Info -->
+                    
+                    <!-- END Sidebar Extra Info -->
+                </div>
+                <!-- END Main Sidebar -->
+
+                <!-- Main Container -->
+                <div id="main-container">
+                    <!-- Header -->
+                    <!-- In the PHP version you can set the following options from inc/config file -->
+                    <!--
+                        Available header.navbar classes:
+
+                        'navbar-default'            for the default light header
+                        'navbar-inverse'            for an alternative dark header
+
+                        'navbar-fixed-top'          for a top fixed header (fixed main sidebar with scroll will be auto initialized, functionality can be found in js/app.js - handleSidebar())
+                            'header-fixed-top'      has to be added on #page-container only if the class 'navbar-fixed-top' was added
+
+                        'navbar-fixed-bottom'       for a bottom fixed header (fixed main sidebar with scroll will be auto initialized, functionality can be found in js/app.js - handleSidebar()))
+                            'header-fixed-bottom'   has to be added on #page-container only if the class 'navbar-fixed-bottom' was added
+                    -->
+                    <header class="navbar navbar-inverse navbar-fixed-top">
+                        <!-- Left Header Navigation -->
+                        <ul class="nav navbar-nav-custom">
+                            <!-- Main Sidebar Toggle Button -->
+                            <li>
+                                <a href="javascript:void(0)" onclick="App.sidebar('toggle-sidebar');this.blur();">
+                                    <i class="fa fa-ellipsis-v fa-fw animation-fadeInRight" id="sidebar-toggle-mini"></i>
+                                    <i class="fa fa-bars fa-fw animation-fadeInRight" id="sidebar-toggle-full"></i>
+                                </a>
+                                
+                            </li>
+                            <!-- END Main Sidebar Toggle Button -->
+
+                            <!-- Header Link -->
+                            
+                            <!-- END Header Link -->
+                        </ul>
+                        <!-- END Left Header Navigation -->
+
+                        <!-- Right Header Navigation -->
+                        <ul class="nav navbar-nav-custom pull-right">
+                            <!-- Search Form -->
+                            
+                            <!-- END Search Form -->
+
+                            <!-- Alternative Sidebar Toggle Button -->
+                            <li>
+                                <a href="javascript:void(0)" onclick="App.sidebar('toggle-sidebar-alt');this.blur();">
+                                    <i class="gi gi-settings"></i>
+                                </a>
+                            </li>
+                            <!-- END Alternative Sidebar Toggle Button -->
+
+                            <!-- User Dropdown -->
+                            <li class="dropdown">
+                                <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">
+                                    <img src="img/placeholders/avatars/avatar9.jpg" alt="avatar">
+                                </a>
+                                 <ul class="dropdown-menu dropdown-menu-right">
+                                   
+                                    
+                                    <li>
+                                        <center>
+                                            <br>
+                                            <img src="img/placeholders/avatars/avatar9.jpg" alt="user" class="avatar"/> <br>
+                                            <h3><strong>User Name</strong></h3>
+                                            <h5>Designation</h5>
+                                        </center>
+                                    </li>
+                                    <li>
+                                        
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li>
+                                         <button type="button" class="btn btn-primary pull-left">Profile</button>
+                                        
+                                           <button type="button" class="btn btn-primary pull-right">Log out</button>
+                                       
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- END User Dropdown -->
+                        </ul>
+                        <!-- END Right Header Navigation -->
+                    </header>
+                    <!-- END Header -->
+
+                    <!-- Page content -->
+                    <div id="page-content" style="min-height: 443px;">
+                        <!-- Widgets Header -->
+                        <div class="content-header">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="header-section">
+                                        <h1>Widgets</h1>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 hidden-xs">
+                                    <div class="header-section">
+                                        <ul class="breadcrumb breadcrumb-top">
+                                            <li>More Elements</li>
+                                            <li><a href="">Widgets</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- END Widgets Header -->
+
+                        <!-- Widgets Content -->
+                        <div class="row">
+                            <div class="col-lg-6 col-lg-push-6">
+                                <div class="row">
+                                    <!-- Image Widgets -->
+                                    <div class="col-sm-6">
+                                        <a href="page_ready_article.html" class="widget">
+                                            <div class="widget-content themed-background text-light-op">
+                                                <i class="fa fa-fw fa-pencil"></i> <strong>Story</strong>
+                                            </div>
+                                            <div class="widget-image widget-image-sm">
+                                                <img src="img/placeholders/photos/photo9.jpg" alt="image">
+                                                <div class="widget-image-content">
+                                                    <h2 class="widget-heading text-light"><strong>The autumn trip that changed my life</strong></h2>
+                                                    <h3 class="widget-heading text-light-op h4">It changed the way I think</h3>
+                                                </div>
+                                                <i class="gi gi-airplane"></i>
+                                            </div>
+                                            <div class="widget-content text-dark">
+                                                <div class="row text-center">
+                                                    <div class="col-xs-4">
+                                                        <i class="fa fa-heart-o"></i> 9.5k
+                                                    </div>
+                                                    <div class="col-xs-4">
+                                                        <i class="fa fa-eye"></i> 76k
+                                                    </div>
+                                                    <div class="col-xs-4">
+                                                        <i class="fa fa-share-alt"></i> 7.2k
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <a href="page_ready_article.html" class="widget">
+                                            <div class="widget-content themed-background text-light-op">
+                                                <i class="fa fa-fw fa-file-text"></i> <strong>Article</strong>
+                                            </div>
+                                            <div class="widget-image widget-image-sm">
+                                                <img src="img/placeholders/photos/photo19.jpg" alt="image">
+                                                <div class="widget-image-content">
+                                                    <h2 class="widget-heading text-light"><strong>How to be more productive</strong></h2>
+                                                    <h3 class="widget-heading text-light-op h4"><em>A step by step guide</em></h3>
+                                                </div>
+                                                <i class="gi gi-check"></i>
+                                            </div>
+                                            <div class="widget-content text-dark">
+                                                <div class="row text-center">
+                                                    <div class="col-xs-4">
+                                                        <i class="fa fa-heart-o"></i> 3.5k
+                                                    </div>
+                                                    <div class="col-xs-4">
+                                                        <i class="fa fa-eye"></i> 35k
+                                                    </div>
+                                                    <div class="col-xs-4">
+                                                        <i class="fa fa-share-alt"></i> 1.5k
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <!-- END Image Widgets -->
+
+                                    <!-- Stats Widgets -->
+                                    <div class="col-sm-6">
+                                        <a href="javascript:void(0)" class="widget">
+                                            <div class="widget-content themed-background-danger text-light-op">
+                                                <i class="fa fa-fw fa-chevron-right"></i> <strong>New Favorites</strong>
+                                            </div>
+                                            <div class="widget-content themed-background-muted text-center">
+                                                <i class="fa fa-heart-o fa-3x text-danger"></i>
+                                            </div>
+                                            <div class="widget-content text-center">
+                                                <h3 class="widget-heading text-dark">+67%</h3>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <a href="javascript:void(0)" class="widget">
+                                            <div class="widget-content themed-background-success text-light-op">
+                                                <i class="fa fa-fw fa-chevron-right"></i> <strong>Balance</strong>
+                                            </div>
+                                            <div class="widget-content themed-background-muted text-center">
+                                                <i class="fa fa-dollar fa-3x text-success"></i>
+                                            </div>
+                                            <div class="widget-content text-center">
+                                                <h2 class="widget-heading text-dark">5,400</h2>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <a href="javascript:void(0)" class="widget">
+                                            <div class="widget-content themed-background-dark text-light-op">
+                                                <i class="fa fa-fw fa-chevron-right"></i> <strong>Active Tickets</strong>
+                                            </div>
+                                            <div class="widget-content themed-background-muted text-center">
+                                                <i class="fa fa-ticket fa-3x text-dark"></i>
+                                            </div>
+                                            <div class="widget-content text-center">
+                                                <h2 class="widget-heading text-dark">15</h2>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <a href="javascript:void(0)" class="widget">
+                                            <div class="widget-content themed-background-info text-light-op">
+                                                <i class="fa fa-fw fa-chevron-right"></i> <strong>New Facebooks Likes</strong>
+                                            </div>
+                                            <div class="widget-content themed-background-muted text-center">
+                                                <i class="fa fa-thumbs-o-up fa-3x text-info"></i>
+                                            </div>
+                                            <div class="widget-content text-center">
+                                                <h2 class="widget-heading text-dark">+75%</h2>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <!-- END Stats Widgets -->
+
+                                    <!-- Carousel Widget -->
+                                    <div class="col-sm-8">
+                                        <div class="widget">
+                                            <div class="widget-content widget-content-mini themed-background text-light-op">
+                                                <i class="fa fa-fw fa-picture-o"></i> Photo Gallery
+                                            </div>
+                                            <div class="widget-content widget-content-full">
+                                                <div id="info-carousel" class="carousel slide remove-margin">
+                                                    <!-- Indicators -->
+                                                    <ol class="carousel-indicators">
+                                                        <li data-target="#info-carousel" data-slide-to="0" class="active"></li>
+                                                        <li data-target="#info-carousel" data-slide-to="1"></li>
+                                                        <li data-target="#info-carousel" data-slide-to="2"></li>
+                                                        <li data-target="#info-carousel" data-slide-to="3"></li>
+                                                    </ol>
+                                                    <!-- END Indicators -->
+
+                                                    <!-- Wrapper for slides -->
+                                                    <div class="carousel-inner">
+                                                        <div class="item active">
+                                                            <img src="img/placeholders/photos/photo11.jpg" alt="image">
+                                                        </div>
+                                                        <div class="item">
+                                                            <img src="img/placeholders/photos/photo12.jpg" alt="image">
+                                                        </div>
+                                                        <div class="item">
+                                                            <img src="img/placeholders/photos/photo2.jpg" alt="image">
+                                                        </div>
+                                                        <div class="item">
+                                                            <img src="img/placeholders/photos/photo8.jpg" alt="image">
+                                                        </div>
+                                                    </div>
+                                                    <!-- END Wrapper for slides -->
+
+                                                    <!-- Controls -->
+                                                    <a class="left carousel-control" href="#info-carousel" data-slide="prev">
+                                                        <span><i class="fa fa-chevron-left"></i></span>
+                                                    </a>
+                                                    <a class="right carousel-control" href="#info-carousel" data-slide="next">
+                                                        <span><i class="fa fa-chevron-right"></i></span>
+                                                    </a>
+                                                    <!-- END Controls -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- END Carousel Widget -->
+
+                                    <!-- Mini Widgets -->
+                                    <div class="col-sm-4">
+                                        <a href="javascript:void(0)" class="widget text-center">
+                                            <div class="widget-content">
+                                                <i class="fa fa-3x fa-cloud-download text-dark"></i>
+                                            </div>
+                                            <div class="widget-content themed-background-muted text-dark">
+                                                <strong>127,000</strong><br>Downloads
+                                            </div>
+                                        </a>
+                                        <a href="javascript:void(0)" class="widget text-center">
+                                            <div class="widget-content themed-background-info text-light-op text-center">
+                                                <i class="fa fa-3x fa-facebook push-bit"></i><br>
+                                                <strong>800 Likes</strong>
+                                            </div>
+                                        </a>
+                                        <a href="javascript:void(0)" class="widget">
+                                            <div class="widget-content themed-background-danger text-light-op text-center">
+                                                <i class="fa fa-3x fa-database push-bit"></i><br>
+                                                <strong>8/10 Databases</strong>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <!-- END Mini Widgets -->
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-lg-pull-6">
+                                <div class="row">
+                                    <!-- Simple User Widgets -->
+                                    <div class="col-sm-6">
+                                        <a href="javascript:void(0)" class="widget">
+                                            <div class="widget-content text-right clearfix">
+                                                <img src="img/placeholders/avatars/avatar9.jpg" alt="avatar" class="img-circle img-thumbnail img-thumbnail-avatar pull-left">
+                                                <h2 class="widget-heading h3"><strong>Jeremy Doe</strong></h2>
+                                                <span class="text-muted">Web Designer</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <a href="javascript:void(0)" class="widget">
+                                            <div class="widget-content themed-background-danger clearfix">
+                                                <img src="img/placeholders/avatars/avatar12.jpg" alt="avatar" class="img-circle img-thumbnail img-thumbnail-avatar pull-right">
+                                                <h2 class="widget-heading h3 text-light"><strong>Sara Wright</strong></h2>
+                                                <span class="text-light-op">Web Developer</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <!-- END Simple User Widgets -->
+
+                                    <!-- Stats User Widgets -->
+                                    <div class="col-sm-6">
+                                        <a href="javascript:void(0)" class="widget">
+                                            <div class="widget-content text-center">
+                                                <img src="img/placeholders/avatars/avatar6@2x.jpg" alt="avatar" class="img-circle img-thumbnail img-thumbnail-avatar-2x">
+                                                <h2 class="widget-heading h3 text-muted">Grace Griffin</h2>
+                                            </div>
+                                            <div class="widget-content themed-background-muted text-dark text-center">
+                                                <strong>Photographer</strong>, Sydney
+                                            </div>
+                                            <div class="widget-content">
+                                                <div class="row text-center">
+                                                    <div class="col-xs-6">
+                                                        <h3 class="widget-heading"><i class="gi gi-picture text-success"></i> <br><small>350 Photos</small></h3>
+                                                    </div>
+                                                    <div class="col-xs-6">
+                                                        <h3 class="widget-heading"><i class="gi gi-charts text-primary"></i> <br><small>4.2k Sales</small></h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <a href="javascript:void(0)" class="widget">
+                                            <div class="widget-content text-center">
+                                                <img src="img/placeholders/avatars/avatar13@2x.jpg" alt="avatar" class="img-circle img-thumbnail img-thumbnail-avatar-2x">
+                                                <h2 class="widget-heading h3 text-muted">Anna Wigren</h2>
+                                            </div>
+                                            <div class="widget-content themed-background-muted text-dark text-center">
+                                                <strong>Logo Designer</strong>, Sweden<strong>Logo Designer</strong>, Sweden<strong>Logo Designer</strong>, Sweden<strong>Logo Designer</strong>, Sweden<strong>Logo Designer</strong>, Sweden<strong>Logo Designer</strong>, Sweden<strong>Logo Designer</strong>, Sweden<strong>Logo Designer</strong>, Sweden<strong>Logo Designer</strong>, Sweden<strong>Logo Designer</strong>, Sweden<strong>Logo Designer</strong>, Sweden<strong>Logo Designer</strong>, Sweden<strong>Logo Designer</strong>, Sweden
+                                            </div>
+                                            <div class="widget-content">
+                                                <div class="row text-center">
+                                                    <div class="col-xs-6">
+                                                        <h3 class="widget-heading"><i class="gi gi-briefcase text-info"></i> <br><small>35 Projects</small></h3>
+                                                    </div>
+                                                    <div class="col-xs-6">
+                                                        <h3 class="widget-heading"><i class="gi gi-heart_empty text-danger"></i> <br><small>5.3k Likes</small></h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <!-- END Stats User Widgets -->
+
+                                    <!-- Media Widgets -->
+                                    <div class="col-sm-12">
+                                        <div class="widget">
+                                            <div class="widget-image widget-image-xs">
+                                                <img src="img/placeholders/photos/photo13@2x.jpg" alt="image">
+                                                <div class="widget-image-content">
+                                                    <h2 class="widget-heading text-light"><strong>TV Shows</strong></h2>
+                                                    <h3 class="widget-heading text-light-op h4">You have to watch these shows</h3>
+                                                </div>
+                                                <i class="gi gi-play"></i>
+                                            </div>
+                                            <div class="widget-content widget-content-full">
+                                                <table class="table table-striped table-borderless remove-margin">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><a href="javascript:void(0)" class="text-black">Game of Thrones</a></td>
+                                                            <td class="text-center" style="width: 80px;"><span class="text-muted">2011</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="javascript:void(0)" class="text-black">Breakind Bad</a></td>
+                                                            <td class="text-center" style="width: 80px;"><span class="text-muted">2008</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="javascript:void(0)" class="text-black">True Detective</a></td>
+                                                            <td class="text-center" style="width: 80px;"><span class="text-muted">2014</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="javascript:void(0)" class="text-black">Dexter</a></td>
+                                                            <td class="text-center" style="width: 80px;"><span class="text-muted">2006</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="javascript:void(0)" class="text-black">Lost</a></td>
+                                                            <td class="text-center" style="width: 80px;"><span class="text-muted">2004</span></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <div class="widget">
+                                            <div class="widget-image widget-image-xs">
+                                                <img src="img/placeholders/photos/photo18@2x.jpg" alt="image">
+                                                <div class="widget-image-content">
+                                                    <h2 class="widget-heading text-light"><strong>Video Games</strong></h2>
+                                                    <h3 class="widget-heading text-light-op h4">Favorite games you have to play</h3>
+                                                </div>
+                                                <i class="fa fa-gamepad"></i>
+                                            </div>
+                                            <div class="widget-content widget-content-full">
+                                                <table class="table table-striped table-borderless remove-margin">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><a href="javascript:void(0)" class="text-black">Half Life 2</a></td>
+                                                            <td class="text-center" style="width: 80px;"><span class="text-muted">2004</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="javascript:void(0)" class="text-black">Grand Theft Auto V</a></td>
+                                                            <td class="text-center" style="width: 80px;"><span class="text-muted">2013</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="javascript:void(0)" class="text-black">Dark Souls 2</a></td>
+                                                            <td class="text-center" style="width: 80px;"><span class="text-muted">2014</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="javascript:void(0)" class="text-black">Amnesia: The Dark Descent</a></td>
+                                                            <td class="text-center" style="width: 80px;"><span class="text-muted">2010</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="javascript:void(0)" class="text-black">Tomb Raider</a></td>
+                                                            <td class="text-center" style="width: 80px;"><span class="text-muted">2013</span></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- END Media Widgets -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <!-- Pie Charts Widgets -->
+                            <div class="col-sm-6 col-lg-3">
+                                <div class="widget">
+                                    <div class="widget-content widget-content-mini themed-background-muted">
+                                        <div class="pull-right text-muted">75%</div>
+                                        <i class="fa fa-pencil-square"></i> Profile Completion
+                                    </div>
+                                    <div class="widget-content text-center">
+                                        <div class="pie-chart easyPieChart" data-percent="75" data-line-width="3" data-bar-color="#cccccc" data-track-color="#f9f9f9" style="width: 80px; height: 80px; line-height: 80px;">
+                                            <img src="img/placeholders/avatars/avatar2.jpg" alt="avatar" class="pie-avatar img-circle">
+                                        <canvas width="80" height="80"></canvas></div>
+                                    </div>
+                                    <div class="widget-content themed-background-muted">
+                                        <div class="progress progress-striped progress-mini active remove-margin">
+                                            <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-3">
+                                <div class="widget">
+                                    <div class="widget-content widget-content-mini themed-background-muted">
+                                        <div class="pull-right text-muted">5/10</div>
+                                        To-do Progress
+                                    </div>
+                                    <div class="widget-content text-center">
+                                        <div class="pie-chart easyPieChart" data-percent="50" data-line-width="3" data-bar-color="#cccccc" data-track-color="#f9f9f9" style="width: 80px; height: 80px; line-height: 80px;">
+                                            <span><i class="fa fa-tasks text-info"></i></span>
+                                        <canvas width="80" height="80"></canvas></div>
+                                    </div>
+                                    <div class="widget-content themed-background-muted">
+                                        <div class="progress progress-striped progress-mini active remove-margin">
+                                            <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-3">
+                                <div class="widget">
+                                    <div class="widget-content widget-content-mini themed-background-muted">
+                                        <div class="pull-right text-muted">90%</div>
+                                        <i class="fa fa-check"></i> Project Completion
+                                    </div>
+                                    <div class="widget-content text-center">
+                                        <div class="pie-chart easyPieChart" data-percent="90" data-line-width="3" data-bar-color="#cccccc" data-track-color="#f9f9f9" style="width: 80px; height: 80px; line-height: 80px;">
+                                            <span><i class="fa fa-suitcase text-info"></i></span>
+                                        <canvas width="80" height="80"></canvas></div>
+                                    </div>
+                                    <div class="widget-content themed-background-muted">
+                                        <div class="progress progress-striped progress-mini active remove-margin">
+                                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-3">
+                                <div class="widget">
+                                    <div class="widget-content widget-content-mini themed-background-muted text-center">
+                                        <i class="fa fa-shopping-cart"></i> Order Progress
+                                    </div>
+                                    <div class="widget-content text-center">
+                                        <div class="pie-chart easyPieChart" data-percent="25" data-line-width="4" data-bar-color="#cccccc" data-track-color="#f9f9f9" style="width: 80px; height: 80px; line-height: 80px;">
+                                            <span><strong>25%</strong></span>
+                                        <canvas width="80" height="80"></canvas></div>
+                                    </div>
+                                    <div class="widget-content themed-background-muted">
+                                        <div class="progress progress-striped progress-mini active remove-margin">
+                                            <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- END Pie Charts Widgets -->
+                        </div>
+                        <div class="row">
+                            <!-- Simple Stats Widgets -->
+                            <div class="col-sm-6 col-lg-3">
+                                <a href="javascript:void(0)" class="widget">
+                                    <div class="widget-content widget-content-mini themed-background-dark-social">
+                                        <span class="pull-right text-muted">+30%</span>
+                                        <strong class="text-light-op">Today</strong>
+                                    </div>
+                                    <div class="widget-content themed-background-social clearfix">
+                                        <div class="widget-icon pull-right">
+                                            <i class="gi gi-airplane text-light-op"></i>
+                                        </div>
+                                        <h2 class="widget-heading h3 text-light"><strong>+ 10</strong></h2>
+                                        <span class="text-light-op">FLIGHTS</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-sm-6 col-lg-3">
+                                <a href="javascript:void(0)" class="widget">
+                                    <div class="widget-content widget-content-mini themed-background-dark-flat">
+                                        <span class="pull-right text-muted">-20%</span>
+                                        <strong class="text-light-op">This month</strong>
+                                    </div>
+                                    <div class="widget-content themed-background-flat clearfix">
+                                        <div class="widget-icon pull-right">
+                                            <i class="gi gi-albums text-light-op"></i>
+                                        </div>
+                                        <h2 class="widget-heading h3 text-light"><strong>+ 5</strong></h2>
+                                        <span class="text-light-op">ALBUMS</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-sm-6 col-lg-3">
+                                <a href="javascript:void(0)" class="widget">
+                                    <div class="widget-content widget-content-mini themed-background-dark-creme">
+                                        <span class="pull-right text-muted">2 Free!</span>
+                                        <strong class="text-light-op">Now</strong>
+                                    </div>
+                                    <div class="widget-content themed-background-creme clearfix">
+                                        <div class="widget-icon pull-right">
+                                            <i class="gi gi-wifi text-light-op"></i>
+                                        </div>
+                                        <h2 class="widget-heading h3 text-light"><strong>15</strong></h2>
+                                        <span class="text-light-op">NETWORKS</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-sm-6 col-lg-3">
+                                <a href="javascript:void(0)" class="widget">
+                                    <div class="widget-content widget-content-mini themed-background-dark-amethyst">
+                                        <span class="pull-right text-muted">+250%</span>
+                                        <strong class="text-light-op">This week</strong>
+                                    </div>
+                                    <div class="widget-content themed-background-amethyst clearfix">
+                                        <div class="widget-icon pull-right">
+                                            <i class="gi gi-video_hd text-light-op"></i>
+                                        </div>
+                                        <h2 class="widget-heading h3 text-light"><strong>25</strong></h2>
+                                        <span class="text-light-op">HD VIDEOS</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-sm-6 col-lg-3">
+                                <a href="javascript:void(0)" class="widget">
+                                    <div class="widget-content widget-content-mini themed-background-muted">
+                                        <span class="pull-right text-muted">+30%</span>
+                                        <strong class="text-dark">Today</strong>
+                                    </div>
+                                    <div class="widget-content text-right clearfix">
+                                        <div class="widget-icon themed-background-social pull-left">
+                                            <i class="gi gi-airplane text-light-op"></i>
+                                        </div>
+                                        <h2 class="widget-heading h3 themed-color-social"><strong>+ 10</strong></h2>
+                                        <span class="text-muted">FLIGHTS</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-sm-6 col-lg-3">
+                                <a href="javascript:void(0)" class="widget">
+                                    <div class="widget-content widget-content-mini themed-background-muted">
+                                        <span class="pull-right text-muted">-20%</span>
+                                        <strong class="text-dark">This month</strong>
+                                    </div>
+                                    <div class="widget-content text-right clearfix">
+                                        <div class="widget-icon themed-background-flat pull-left">
+                                            <i class="gi gi-albums text-light-op"></i>
+                                        </div>
+                                        <h2 class="widget-heading h3 themed-color-flat"><strong>+ 5</strong></h2>
+                                        <span class="text-muted">ALBUMS</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-sm-6 col-lg-3">
+                                <a href="javascript:void(0)" class="widget">
+                                    <div class="widget-content widget-content-mini themed-background-muted">
+                                        <span class="pull-right text-muted">2 Free!</span>
+                                        <strong class="text-dark">Now</strong>
+                                    </div>
+                                    <div class="widget-content text-right clearfix">
+                                        <div class="widget-icon themed-background-creme pull-left">
+                                            <i class="gi gi-wifi text-light-op"></i>
+                                        </div>
+                                        <h2 class="widget-heading h3 themed-color-creme"><strong>15</strong></h2>
+                                        <span class="text-muted">NETWORKS</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-sm-6 col-lg-3">
+                                <a href="javascript:void(0)" class="widget">
+                                    <div class="widget-content widget-content-mini themed-background-muted">
+                                        <span class="pull-right text-muted">+250%</span>
+                                        <strong class="text-dark">This week</strong>
+                                    </div>
+                                    <div class="widget-content text-right clearfix">
+                                        <div class="widget-icon themed-background-amethyst pull-left">
+                                            <i class="gi gi-video_hd text-light-op"></i>
+                                        </div>
+                                        <h2 class="widget-heading h3 themed-color-amethyst"><strong>25</strong></h2>
+                                        <span class="text-muted">HD VIDEOS</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- END Simple Stats Widgets -->
+                        </div>
+                        <div class="row">
+                            <!-- User Widgets -->
+                            <div class="col-lg-4">
+                                <div class="widget">
+                                    <div class="widget-content themed-background-flat text-center">
+                                        <a href="javascript:void(0)">
+                                            <img src="img/placeholders/avatars/avatar4@2x.jpg" alt="avatar" class="img-circle img-thumbnail img-thumbnail-avatar-2x">
+                                        </a>
+                                    </div>
+                                    <div class="widget-content themed-background-muted text-center">
+                                        <div class="btn-group">
+                                            <a href="javascript:void(0)" class="btn btn-effect-ripple btn-default" style="overflow: hidden; position: relative;"><i class="fa fa-share"></i> Follow</a>
+                                            <a href="javascript:void(0)" class="btn btn-effect-ripple btn-default" style="overflow: hidden; position: relative;"><i class="fa fa-suitcase"></i> Projects</a>
+                                        </div>
+                                    </div>
+                                    <div class="widget-content">
+                                        <div class="row text-center">
+                                            <div class="col-xs-4">
+                                                <h3 class="widget-heading"><small>PROJECTS</small><br><a href="javascript:void(0)" class="themed-color-flat">16</a></h3>
+                                            </div>
+                                            <div class="col-xs-4">
+                                                <h3 class="widget-heading"><small>LIKES</small><br><a href="javascript:void(0)" class="themed-color-flat">65k</a></h3>
+                                            </div>
+                                            <div class="col-xs-4">
+                                                <h3 class="widget-heading"><small>STORIES</small><br><a href="javascript:void(0)" class="themed-color-flat">9</a></h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="widget">
+                                    <div class="widget-content themed-background-passion text-right clearfix">
+                                        <a href="javascript:void(0)" class="pull-left">
+                                            <img src="img/placeholders/avatars/avatar7@2x.jpg" alt="avatar" class="img-circle img-thumbnail img-thumbnail-avatar-2x">
+                                        </a>
+                                        <h3 class="widget-heading text-light">George Steven</h3>
+                                        <h4 class="widget-heading text-light-op">Web Developer</h4>
+                                    </div>
+                                    <div class="widget-content themed-background-muted text-center">
+                                        <div class="btn-group">
+                                            <a href="javascript:void(0)" class="btn btn-effect-ripple btn-danger" style="overflow: hidden; position: relative;"><i class="fa fa-share"></i> Follow</a>
+                                            <a href="javascript:void(0)" class="btn btn-effect-ripple btn-danger" style="overflow: hidden; position: relative;"><i class="fa fa-suitcase"></i> Projects</a>
+                                        </div>
+                                    </div>
+                                    <div class="widget-content">
+                                        <div class="row text-center">
+                                            <div class="col-xs-4">
+                                                <h3 class="widget-heading"><small>PROJECTS</small><br><a href="javascript:void(0)" class="themed-color-passion">28</a></h3>
+                                            </div>
+                                            <div class="col-xs-4">
+                                                <h3 class="widget-heading"><small>LIKES</small><br><a href="javascript:void(0)" class="themed-color-passion">28k</a></h3>
+                                            </div>
+                                            <div class="col-xs-4">
+                                                <h3 class="widget-heading"><small>STORIES</small><br><a href="javascript:void(0)" class="themed-color-passion">19</a></h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="widget">
+                                    <div class="widget-content themed-background-creme text-left clearfix">
+                                        <a href="javascript:void(0)" class="pull-right">
+                                            <img src="img/placeholders/avatars/avatar1@2x.jpg" alt="avatar" class="img-circle img-thumbnail img-thumbnail-avatar-2x">
+                                        </a>
+                                        <h3 class="widget-heading text-light">Bryan Douglas</h3>
+                                        <h4 class="widget-heading text-light-op">Photographer</h4>
+                                    </div>
+                                    <div class="widget-content themed-background-muted text-center">
+                                        <div class="btn-group">
+                                            <a href="javascript:void(0)" class="btn btn-effect-ripple btn-warning" style="overflow: hidden; position: relative;"><i class="fa fa-share"></i> Follow</a>
+                                            <a href="javascript:void(0)" class="btn btn-effect-ripple btn-warning" style="overflow: hidden; position: relative;"><i class="fa fa-suitcase"></i> Projects</a>
+                                        </div>
+                                    </div>
+                                    <div class="widget-content">
+                                        <div class="row text-center">
+                                            <div class="col-xs-4">
+                                                <h3 class="widget-heading"><small>PROJECTS</small><br><a href="javascript:void(0)" class="themed-color-creme">39</a></h3>
+                                            </div>
+                                            <div class="col-xs-4">
+                                                <h3 class="widget-heading"><small>LIKES</small><br><a href="javascript:void(0)" class="themed-color-creme">108k</a></h3>
+                                            </div>
+                                            <div class="col-xs-4">
+                                                <h3 class="widget-heading"><small>STORIES</small><br><a href="javascript:void(0)" class="themed-color-creme">35</a></h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- END User Widgets -->
+                        </div>
+                        <div class="row">
+                            <!-- Statistics Widgets -->
+                            <div class="col-sm-4">
+                                <div class="widget">
+                                    <div class="widget-content text-center">
+                                        <i class="fa fa-bar-chart-o"></i> <strong>Weekly Sales</strong>
+                                    </div>
+                                    <div class="widget-content themed-background-muted text-center">
+                                        <span id="widget-chart-sales"><canvas width="200" height="120" style="display: inline-block; width: 200px; height: 120px; vertical-align: top;"></canvas></span>
+                                    </div>
+                                    <div class="widget-content">
+                                        <div class="row text-center">
+                                            <div class="col-xs-6">
+                                                <h3 class="widget-heading"><i class="gi gi-book_open text-muted push"></i> <br><small>123 Total Sales</small></h3>
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <h3 class="widget-heading"><i class="gi gi-user_add text-muted push"></i> <br><small>+10% Clients</small></h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="widget">
+                                    <div class="widget-content text-center">
+                                        <i class="fa fa-bar-chart-o"></i> <strong>Weekly Tickets</strong>
+                                    </div>
+                                    <div class="widget-content themed-background-muted text-center">
+                                        <span id="widget-chart-tickets"><canvas width="200" height="120" style="display: inline-block; width: 200px; height: 120px; vertical-align: top;"></canvas></span>
+                                    </div>
+                                    <div class="widget-content">
+                                        <div class="row text-center">
+                                            <div class="col-xs-6">
+                                                <h3 class="widget-heading"><i class="gi gi-life_preserver text-muted push"></i> <br><small>+30% Tickets</small></h3>
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <h3 class="widget-heading"><i class="gi gi-check text-muted push"></i> <br><small>100% Resolved</small></h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="widget">
+                                    <div class="widget-content text-center">
+                                        <i class="fa fa-bar-chart-o"></i> <strong>Weekly Earnings</strong>
+                                    </div>
+                                    <div class="widget-content themed-background-muted text-center">
+                                        <span id="widget-chart-earnings"><canvas width="129" height="120" style="display: inline-block; width: 129px; height: 120px; vertical-align: top;"></canvas></span>
+                                    </div>
+                                    <div class="widget-content">
+                                        <div class="row text-center">
+                                            <div class="col-xs-6">
+                                                <h3 class="widget-heading"><i class="gi gi-wallet text-muted push"></i> <br><small>$670 in Wallet</small></h3>
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <h3 class="widget-heading"><i class="gi gi-charts text-muted push"></i> <br><small>+10% Earnings</small></h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-8">
+                                <div class="widget">
+                                    <div class="widget-content widget-content-mini themed-background-dark-default text-light text-center">
+                                        <i class="fa fa-bar-chart-o"></i> <strong>Last Year Roundup</strong>
+                                    </div>
+                                    <div class="widget-content themed-background-muted">
+                                        <div id="widget-chart-classic" style="height: 380px; padding: 0px; position: relative;"><canvas class="flot-base" width="468" height="304" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 586px; height: 380px;"></canvas><div class="flot-text" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; font-size: smaller; color: rgb(84, 84, 84);"><div class="flot-x-axis flot-x1-axis xAxis x1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;"><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 48px; top: 364px; left: 24px; text-align: center;">Jan</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 48px; top: 364px; left: 73px; text-align: center;">Feb</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 48px; top: 364px; left: 121px; text-align: center;">Mar</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 48px; top: 364px; left: 171px; text-align: center;">Apr</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 48px; top: 364px; left: 218px; text-align: center;">May</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 48px; top: 364px; left: 269px; text-align: center;">Jun</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 48px; top: 364px; left: 321px; text-align: center;">Jul</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 48px; top: 364px; left: 367px; text-align: center;">Aug</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 48px; top: 364px; left: 417px; text-align: center;">Sep</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 48px; top: 364px; left: 466px; text-align: center;">Oct</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 48px; top: 364px; left: 514px; text-align: center;">Nov</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 48px; top: 364px; left: 564px; text-align: center;">Dec</div></div><div class="flot-y-axis flot-y1-axis yAxis y1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;"><div class="flot-tick-label tickLabel" style="position: absolute; top: 351px; left: 22px; text-align: right;">0</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 235px; left: 0px; text-align: right;">2000</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 120px; left: 0px; text-align: right;">4000</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 4px; left: 0px; text-align: right;">6000</div></div></div><canvas class="flot-overlay" width="468" height="304" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 586px; height: 380px;"></canvas><div class="legend"><table style="position:absolute;top:17px;left:38px;;font-size:smaller;color:#545454"><tbody><tr><td class="legendColorBox"><div style="border:1px solid #ccc;padding:1px"><div style="width:4px;height:0;border:5px solid rgb(92,205,222);overflow:hidden"></div></div></td><td class="legendLabel">Earnings</td></tr><tr><td class="legendColorBox"><div style="border:1px solid #ccc;padding:1px"><div style="width:4px;height:0;border:5px solid rgb(69,78,89);overflow:hidden"></div></div></td><td class="legendLabel">Sales</td></tr><tr><td class="legendColorBox"><div style="border:1px solid #ccc;padding:1px"><div style="width:4px;height:0;border:5px solid rgb(255,255,255);overflow:hidden"></div></div></td><td class="legendLabel">Tickets</td></tr></tbody></table></div></div>
+                                    </div>
+                                    <div class="widget-content">
+                                        <div class="row text-center">
+                                            <div class="col-xs-4">
+                                                <h3 class="widget-heading"><i class="gi gi-book_open text-muted push"></i> <br><small>17k Sales</small></h3>
+                                            </div>
+                                            <div class="col-xs-4">
+                                                <h3 class="widget-heading"><i class="gi gi-wallet text-muted push"></i> <br><small>$41k Earnings</small></h3>
+                                            </div>
+                                            <div class="col-xs-4">
+                                                <h3 class="widget-heading"><i class="gi gi-life_preserver text-muted push"></i> <br><small>3165 Tickets</small></h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="widget">
+                                    <div class="widget-content widget-content-mini themed-background-dark-default text-light text-center">
+                                        <i class="fa fa-bar-chart-o"></i> <strong>Today Stats</strong>
+                                    </div>
+                                    <div class="widget-content themed-background-muted">
+                                        <div class="row text-center">
+                                            <div class="col-xs-6">
+                                                <h3 class="widget-heading"><i class="gi gi-bug text-muted push"></i> <br><small>3 Open Tickets</small></h3>
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <h3 class="widget-heading"><i class="gi gi-flag text-muted push"></i> <br><small>5 Updates</small></h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="widget-content">
+                                        <div id="widget-chart-pie" style="height: 380px; padding: 0px; position: relative;"><canvas class="flot-base" width="211" height="304" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 264px; height: 380px;"></canvas><canvas class="flot-overlay" width="211" height="304" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 264px; height: 380px;"></canvas><div class="pieLabelBackground" style="position: absolute; width: 45px; height: 43px; top: 116px; left: 180px; background-color: rgb(0, 0, 0); opacity: 0.75;"></div><span class="pieLabel" id="pieLabel0" style="position: absolute; top: 116px; left: 180px;"><div class="chart-pie-label">Sales<br>30%</div></span><div class="pieLabelBackground" style="position: absolute; width: 58px; height: 44px; top: 220.5px; left: 174px; background-color: rgb(0, 0, 0); opacity: 0.75;"></div><span class="pieLabel" id="pieLabel1" style="position: absolute; top: 220.5px; left: 174px;"><div class="chart-pie-label">Tickets<br>10%</div></span><div class="pieLabelBackground" style="position: absolute; width: 65px; height: 44px; top: 195.5px; left: 15px; background-color: rgb(0, 0, 0); opacity: 0.75;"></div><span class="pieLabel" id="pieLabel2" style="position: absolute; top: 195.5px; left: 15px;"><div class="chart-pie-label">Earnings<br>60%</div></span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- END Statistics Widgets -->
+                        </div>
+                        <div class="row">
+                            <!-- Weather Widgets -->
+                            <div class="col-lg-8">
+                                <div class="widget">
+                                    <div class="widget-image widget-image-xs">
+                                        <img src="img/placeholders/photos/photo1@2x.jpg" alt="image">
+                                        <div class="widget-image-content">
+                                            <div class="widget-heading text-light h1 pull-right"><strong>16</strong>° <span class="text-light-op">C</span></div>
+                                            <h2 class="widget-heading text-light"><strong>Salzburg</strong>, Austria</h2>
+                                            <h3 class="widget-heading text-light-op h4">Mostly Sunny</h3>
+                                        </div>
+                                    </div>
+                                    <div class="widget-content widget-content-full">
+                                        <div class="row text-center">
+                                            <div class="col-xs-6 col-lg-2 push-inner-top-bottom border-right border-bottom">
+                                                <h2 class="h5 text-uppercase push"><strong>Mon</strong></h2>
+                                                <h3 class="widget-heading">
+                                                    15° C<br><small>Sunny</small>
+                                                </h3>
+                                            </div>
+                                            <div class="col-xs-6 col-lg-2 push-inner-top-bottom border-right border-bottom">
+                                                <h2 class="h5 text-uppercase push"><strong>Tue</strong></h2>
+                                                <h3 class="widget-heading">
+                                                    9° C<br><small>Snow</small>
+                                                </h3>
+                                            </div>
+                                            <div class="col-xs-6 col-lg-2 push-inner-top-bottom border-right border-bottom">
+                                                <h2 class="h5 text-uppercase push"><strong>Wed</strong></h2>
+                                                <h3 class="widget-heading">
+                                                    12° C<br><small>Rainy</small>
+                                                </h3>
+                                            </div>
+                                            <div class="col-xs-6 col-lg-2 push-inner-top-bottom border-right border-bottom">
+                                                <h2 class="h5 text-uppercase push"><strong>Thu</strong></h2>
+                                                <h3 class="widget-heading">
+                                                    19° C<br><small>Cloudy</small>
+                                                </h3>
+                                            </div>
+                                            <div class="col-xs-6 col-lg-2 push-inner-top-bottom border-right border-bottom">
+                                                <h2 class="h5 text-uppercase push"><strong>Fri</strong></h2>
+                                                <h3 class="widget-heading">
+                                                    21° C<br><small>Sunny</small>
+                                                </h3>
+                                            </div>
+                                            <div class="col-xs-6 col-lg-2 push-inner-top-bottom border-bottom">
+                                                <h2 class="h5 text-uppercase push"><strong>Sat</strong></h2>
+                                                <h3 class="widget-heading">
+                                                    8° C<br><small>Cloudy</small>
+                                                </h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="widget">
+                                    <div class="widget-image widget-image-xs">
+                                        <img src="img/placeholders/photos/photo9@2x.jpg" alt="image">
+                                        <div class="widget-image-content">
+                                            <div class="widget-heading text-light h1 pull-right"><strong>9</strong>° <span class="text-light-op">C</span></div>
+                                            <h2 class="widget-heading text-light"><strong>Paris</strong>, France</h2>
+                                            <h3 class="widget-heading text-light-op h4">Scattered Clouds</h3>
+                                        </div>
+                                    </div>
+                                    <div class="widget-content widget-content-full">
+                                        <div class="row text-center">
+                                            <div class="col-xs-6 push-inner-top-bottom border-right">
+                                                <h2 class="h5 text-info text-uppercase push"><strong>Low</strong></h2>
+                                                <h3 class="widget-heading">
+                                                    7° C<br><small><i class="fa fa-caret-down text-info"></i></small>
+                                                </h3>
+                                            </div>
+                                            <div class="col-xs-6 push-inner-top-bottom">
+                                                <h2 class="h5 text-danger text-uppercase push"><strong>High</strong></h2>
+                                                <h3 class="widget-heading">
+                                                    15° C<br><small><i class="fa fa-caret-up text-danger"></i></small>
+                                                </h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- END Weather Widgets -->
+                        </div>
+                        <!-- END Widgets Content -->
+                    </div>
+                    <!-- END Page Content -->
+                </div>
+                <!-- END Main Container -->
+            </div>
+            <!-- END Page Container -->
+        </div>
+        <!-- END Page Wrapper -->
+
+        <!-- jQuery, Bootstrap, jQuery plugins and Custom JS code -->
+        <script src="js/vendor/jquery-2.2.0.min.js"></script>
+        <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/app.js"></script>
+
+        <!-- Load and execute javascript code used only in this page -->
+        <script src="js/pages/uiWidgets.js"></script>
+        <script>$(function(){ UiWidgets.init(); });</script>
+    </body>
+</html>

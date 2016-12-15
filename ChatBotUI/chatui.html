@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Conversation Bot UI Template</title>
+	<!-- load css library -->
+    <link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+  </head>
+
+  <body style="overflow:hidden">
+    <div class="wrapper">
+    <div class="container" style="top:45%">
+		<!-- left sidebar -->
+	   <div class="left">
+            <div class="top">
+                <input type="text" />
+                <a href="javascript:;" class="search"></a>
+            </div>
+            <ul class="people">
+			  <li class="person" data-chat="person2">
+                  <img src="userImage.png" alt="" />
+                  <span class="name">Watson Bot</span>
+                  <span class="preview">Online</span>
+              </li>
+	
+            </ul>
+        </div>
+		
+		<!-- right chat window -->
+        <div class="right">
+            <div class="top"><span><span class="name">Conversation Bot UI Template</span></span></div>
+            <div class="chat" data-chat="person2">
+				<div class="bubble me">message from user</div>
+				<div class="bubble you">message from server</div>
+            </div>
+
+            <div class="write">
+                <input type="text" id="m"/>
+                <a href="javascript:;" class="write-link send" id="send"></a>
+            </div>
+        </div>
+		<!-- end of right window -->
+    </div>
+</div>
+    <!-- load js library -->
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src="js/index.js"></script>
+	
+  </body>
+</html>
